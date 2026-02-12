@@ -3,7 +3,7 @@
 
 <head>
   <style>
-    /* RESET & CENTER */
+    /* reset & center */
     html,
     body {
       margin: 0;
@@ -19,7 +19,7 @@
       -webkit-user-select: none;
     }
 
-    /* THE IPOD SHELL */
+    /* the ipod shell */
     #ipod-shell {
       width: 204px;
       height: 108px;
@@ -35,7 +35,7 @@
       box-sizing: border-box;
     }
 
-    /* THE BLACK SCREEN BEZEL */
+    /* the black screen bezel */
     #screen-bezel {
       width: 103px;
       height: 89px;
@@ -61,7 +61,7 @@
       box-sizing: border-box;
     }
 
-    /* ALBUM ART BLUR BACKGROUND */
+    /* album art blur background */
     #bg-blur {
       position: absolute;
       top: 0;
@@ -76,7 +76,7 @@
       background-position: center;
     }
 
-    /* CONTENT LAYOUT */
+    /* content layout */
     #content-top {
       position: relative;
       z-index: 2;
@@ -121,7 +121,7 @@
       text-overflow: ellipsis;
     }
 
-    /* PROGRESS BAR */
+    /* progress bar */
     #progress-wrap {
       position: relative;
       z-index: 2;
@@ -138,7 +138,7 @@
       border-radius: 2px;
     }
 
-    /* THE CLICK WHEEL */
+    /* the click wheel */
     #wheel {
       width: 67px;
       height: 67px;
@@ -233,19 +233,19 @@
   </div>
 
   <script>
-    // 1. CONTROL FUNCTION
+    // 1. the control function
     function send(command) {
       console.log("Button pressed:", command);
       window.electronAPI.sendControl(command);
     }
 
-    // 2. CLICK LISTENERS
+    // 2. click listeners
     document.getElementById('play-btn').onclick = () => send('play-pause');
     document.getElementById('play').onclick = () => send('play-pause');
     document.getElementById('next').onclick = () => send('next');
     document.getElementById('prev').onclick = () => send('prev');
 
-    // 3. METADATA LISTENERS
+    // 3. metadata listeners
     window.electronAPI.onSpotifyData((data) => {
       if (data.title) document.getElementById('song-title').innerText = data.title;
       if (data.artist) document.getElementById('artist-name').innerText = data.artist;
@@ -256,7 +256,7 @@
       }
     });
 
-    // 4. PROGRESS BAR
+    // 4. progress bar
     window.electronAPI.onProgressTick((percent) => {
       document.getElementById('bar').style.width = percent + '%';
     });
