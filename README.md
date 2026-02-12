@@ -1,2 +1,3 @@
 # music-player
-yayy
+connect to spotify... 
+- working on live updating song/album cover (someone sponsor me so i can have premium)
