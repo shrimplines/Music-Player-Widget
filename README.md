@@ -7,9 +7,9 @@ it lets you control spotify (or other forms of playing media) using the skip for
 
 ## ✧ what it does
 
-* **actually works**: it uses powershell to send signals to windows so spotify actually listens to the buttons.
-* **vibe**: it stays on top of all your other windows so it's always there.
-* **draggable**: you can just click the iPod shell and drag it wherever you want on your screen.
+* **fucntion**: it uses powershell to send signals to windows so spotify listens to the buttons.
+* **visual**: it stays on top of all your other windows so it's always there.
+* **adaptable**: you can just click the iPod shell and drag it wherever you want on your screen.
 
 ## ✧ work in progress
 
